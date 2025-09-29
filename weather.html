@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details - CityWiseMausam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h1>City<span>Wise</span>Mausam</h1>
+                </a>
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" id="cityInput" placeholder="Enter any city name...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="backBtn" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="loading-spinner" id="loadingSpinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div class="weather-card" id="weatherCard">
+                <div class="weather-header">
+                    <h2 id="cityName">Search for a City</h2>
+                    <div class="date-time" id="currentDateTime"></div>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature-section">
+                        <div class="temperature" id="temperature">--°C</div>
+                        <div class="weather-condition" id="weatherCondition">Enter a city to see weather</div>
+                    </div>
+                    <div class="weather-icon">
+                        <i class="fas fa-cloud" id="weatherIcon"></i>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <i class="fas fa-wind"></i>
+                        <div class="value" id="windSpeed">-- km/h</div>
+                        <div class="label">Wind Speed</div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-tint"></i>
+                        <div class="value" id="humidity">--%</div>
+                        <div class="label">Humidity</div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-temperature-low"></i>
+                        <div class="value" id="feelsLike">--°C</div>
+                        <div class="label">Feels Like</div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div class="value" id="pressure">-- hPa</div>
+                        <div class="label">Pressure</div>
+                    </div>
+                </div>
+                
+                <div class="additional-info">
+                    <div class="info-card">
+                        <h3>Weather Description</h3>
+                        <p id="weatherDescription">No data available</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Visibility</h3>
+                        <p id="visibility">-- km</p>
+                    </div>
+                </div>
+
+                <div class="recent-searches">
+                    <h3>Recent Searches</h3>
+                    <div class="recent-cities" id="recentCities">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>City not found. Please check the spelling and try again.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>CityWiseMausam &copy; 2023 | Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
