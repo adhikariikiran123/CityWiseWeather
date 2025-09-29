@@ -224,5 +224,6 @@ function hideError() {
 
 // Back button functionality
 backBtn.addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
+
 });
